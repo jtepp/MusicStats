@@ -11,10 +11,16 @@
     text-align: center;
     margin: 10px;
 }
+#toptracks{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 420px;
+}
 .track{
     display:flex;
     flex-direction: row;
-    width: 100%;
+    width: fit-content;
     height: fit-content;
     /* cursor: pointer;
     word-wrap: break-word; */
@@ -29,10 +35,11 @@
     /* margin-top: auto; */
     
 }
-#container{
+#related, #container{
     display: flex;
     flex-wrap: wrap;
 }
+
 
 #art{
     position: relative;

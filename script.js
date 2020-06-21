@@ -343,20 +343,21 @@ async function alby(id) {
     // console.log(albums)
     for (a of albums) a.place()
 
-    //Albums
+    //Related
 
-    // await fetch(`https://api.spotify.com/v1/artists/${id}/albums?include_groups=album`, {
-    //     method: "GET",
-    //     headers: {
-    //         Accept: "application/json",
-    //         "content-type": "application/json",
-    //         Authorization: `Bearer ${bear}`,
-    //     }
-    // })
-    //     .then(r => r.json())
-    //     .then(data => d = data.items)
-
-
+    await fetch(`https://api.spotify.com/v1/artists/${id}/related-artists`, {
+        method: "GET",
+        headers: {
+            Accept: "application/json",
+            "content-type": "application/json",
+            Authorization: `Bearer ${bear}`,
+        }
+    })
+        .then(r => r.json())
+        .then(data => d = data.artists)
+    for (a of d) artists.push(new Artist(a, related));
+    for (a of artists) a.place();
+    // console.log(d)
 }
 
 
