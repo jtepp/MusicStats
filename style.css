@@ -1,21 +1,39 @@
 :root{
 }
 
+.albumframe{
+    width: 320px;
+    height:500px;
+
+}
+
 .box {
     display:flex;
     flex-direction: column;
     width: fit-content;
     height: fit-content;
-    cursor: pointer;
+
     word-wrap: break-word;
     text-align: center;
     margin: 10px;
 }
+
+#artistic{
+    cursor: pointer;
+}
+
 #toptracks{
+    align-items: center;
+    min-height: 200px;
+    max-height: 460px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 420px;
+    height: 60vh;
+    overflow-x: scroll;
+}
+audio{
+    height: 50%;
 }
 .track{
     display:flex;
@@ -29,19 +47,47 @@
 
 }
 .tracklabel{
+    text-align: center;
     display:flex;
     flex-direction: column;
     /* line-height: 60px; */
     /* margin-top: auto; */
     
 }
-#related, #container{
+#container{
     display: flex;
     flex-wrap: wrap;
+}
+#related, #albumcont{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
 }
 
 
 #art{
     position: relative;
     /* top: -45px; */
+}
+/* #headstuff{
+    display: flex;
+    flex-direction: row-reverse;
+} */
+
+.top-frames{
+    width: 300px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.frame{
+    margin:-8px;
+    width:100vw;
+    height:80px;
+}
+
+@media(max-width:665px){
+    .frame{
+        height:60vw;
+    }
 }
